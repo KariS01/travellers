@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html>
+  <head>
+        {% if title %}
+        <title>London Travel - {{ title }}</title>
+        {% else %}
+        <title>London Travel</title>
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gok.css') }}">
+  
+    <style>
+      label {
+        display: block;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+
+      input, textarea, button {
+        width: 100%;
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="top-nav">
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/hotels">Hotels</a></li>
+            <li><a href="#entertainment">Entertainment</a></li>
+            <li><a href="#food">Food</a></li>
+            <li style="float:right"><a class="active href="/contact">Contact</a></li>
+          </ul>
+          </div>
+          
+          <br>
+          <div>
+              {% if name %}
+               <h3>Hello {{ name }}</h3>
+               {% else %}
+               <h3>Welcome to the website!</h3>
+               {% endif %}
+             </div>
+                
+                    
+    <h1>Contact us</h1>
+    <form method="POST" action="/process">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="first name">
+        </div>
+        <div>
+            <label for="email">To:</label>
+            <input type="email" name="email" id="email" placeholder="example@mail.com">
+        </div>
+      <div>
+        <label for="message">Message:</label>
+        <textarea rows="10" name="message" id="message"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  
+  
+  </body>
+</html>

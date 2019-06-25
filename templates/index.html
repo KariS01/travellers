@@ -1,0 +1,92 @@
+<!DOCTYPE>
+<html>
+ <head>
+    {% if title %}
+    <title>London Travel - {{ title }}</title>
+    {% else %}
+    <title>London Travel</title>
+    {% endif %}
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gok.css') }}">
+ </head>
+ <body>
+        <div class="top-nav">
+                <ul>
+                  <li><a class="active" href="/">Home</a></li>
+                  <li><a href="/hotels">Hotels</a></li>
+                  <li><a href="#entertainment">Entertainment</a></li>
+                  <li><a href="#food">Food</a></li>
+                  <li style="float:right"><a href="/contact">Contact</a></li>
+                </ul>
+                </div>
+                
+                <br>
+                      <section id="home">
+                          <div id="home-cover" class="bg-parallax">
+                              <div id="home-content-box">
+                                  <div id="home-content-box-inner" class="text-center">
+                                      <div id="home-heading">
+                                          <h1>London </h1>
+                                      </div>
+                
+                                  </div>
+                              </div>
+                          </div>
+                      </section>
+                
+                <br><br>
+                      <section id="aboutUs">
+                          <div class="content-box">
+                              <div class="content-title">
+                                  <h3> Welcome To London</h3>
+                              </div>
+                              <div class="service-item-desc">
+                                  <blockquote>
+                                      <p> <strong>One of the most vibrant and cultural cities in the World. <br>London has it all.<br>No matter what you are interested in, there will be something for you. <br>Whether it's art, fashion or food<br><br> You are always welcomed. </strong>
+                                      </p>
+                                  </blockquote>
+                              </div>
+                          </div>
+                      </section>
+                
+                <br><br>
+                <section id="live">
+                    <div class="content-box">
+                        <div class="content-title">
+                            <h3> Live</h3>
+                        </div>
+                        <div class="service-item-desc">
+                            <blockquote>
+                                <p> <strong>Weather: </strong><p>
+                                  <br>
+                                  <p> <strong>Events: </strong><p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </section>
+                            <section id="TopPlaces">
+                                <div class="content-box">
+                                    <div class="content-title">
+                                      <br>  <h3> Top Places</h3>
+                                    </div>
+                                    <br>
+                                    <div class="service-item-desc">
+                                      <div class="row">
+                                        <div class="column">
+                                          <a href="#"><img class="zoom" src="{{ url_for('static', filename='images/regenthotel.jpg') }}" alt="Mountains" width="225px" height="225px"></a>
+                                          <div class="topleft">Hotels</div>
+                                        </div>
+                                        <div class="column">
+                                          <a href="#"><img class="zoom" src="{{ url_for('static', filename='images/food.jpg') }}" alt="Mountains" width="220px" height="220px"></a>
+                                          <div class="topleft">Food</div>
+                                        </div>
+                                        <div class="column">
+                                          <a href="#"><img class="zoom" src="{{ url_for('static', filename='images/ent.jpg') }}" alt="Forest" width="225px" height="225px"></a>
+                                          <div class="topleft">Enterniment</div>
+                                        </div>
+                
+                                    </div>
+                                    </div>
+                                </div>
+                            </section>
+ </body>
+</html>
