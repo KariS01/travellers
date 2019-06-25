@@ -21,4 +21,3 @@ def process():
 def hotels():
     return render_template("hotels.html", title='Hotels')
 
-app.run(debug=True)
